@@ -88,12 +88,14 @@
     <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
     <div class="js-fullheight fh5co-table">
         <div class="fh5co-table-cell js-fullheight">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul>                
+								<?php
+										wp_nav_menu(array(
+											'menu_class'		 =>	'',
+											'theme_location' => 'main-menu',
+											'container'			 =>	false
+										));
+								 ?>
             </ul>
         </div>
     </div>
