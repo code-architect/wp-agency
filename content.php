@@ -15,8 +15,14 @@
 						<div class="fh5co-services">
 
 							<div class="holder-section">
-								<h2><?php  ?></h2>
-								<?php echo '<a href="'. get_the_permalink() .'"><h3>'. get_the_title() .'</h3></a>' ?>
+
+								<?php
+								// post title
+								echo '<a href="'. get_the_permalink() .'"><h3>'. get_the_title() .'</h3></a>';
+
+								// post meta
+								ca_post_meta();
+								?>
 
 								<!-- Post Image -->
 								<!-- Display only if have a post thubnail -->
@@ -30,19 +36,7 @@
 								<?php endif; ?>
 								<!-- Post image end -->
 
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-								here live the blind texts. Far far away, behind the word mountains, far from the countries
-								Vokalia and Consonantia, there live the blind texts.Far far away, behind the word mountains,
-								far from the countries Vokalia and Consonantia,
-								here live the blind texts. Far far away, behind the word mountains, far from the countries
-								Vokalia and Consonantia, there live the blind texts.Far far away, behind the word mountains,
-								far from the countries Vokalia and Consonantia,
-								here live the blind texts. Far far away, behind the word mountains, far from the countries
-								Vokalia and Consonantia, there live the blind texts.Far far away, behind the word mountains,
-								far from the countries Vokalia and Consonantia,
-								here live the blind texts. Far far away, behind the word mountains, far from the countries
-								Vokalia and Consonantia, there live the blind texts.
-								</p>
+								<p><?php the_content( __(' Continue reading.....', 'agency') ); ?></p>
 							</div>
 						</div>
 					</div>
