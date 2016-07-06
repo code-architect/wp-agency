@@ -47,9 +47,60 @@ if(!function_exists('ca_theme_setup'))
 
 
 
+/* ---------------------------------------------------- */
+/* 3. GET post meta
+/* ---------------------------------------------------- */
+
+if(!function_exists('ca_post_meta'))
+{
+	function ca_post_meta()
+	{
+			if(get_post_type() === 'post')
+			{
+				echo '<p><span>';
+				_e('Created with by ', 'agency');
+				printf('<a href="%1$s" rel="author">%2$s</a>', esc_url(get_author_posts_url(get_the_author_meta('ID'))), get_the_author());
+				echo ' | '.get_the_date().'</span></p>';
+
+			}
+	}
+}
 
 
+/* ---------------------------------------------------- */
+/* 4. Pagination
+/* ---------------------------------------------------- */
 
+if(!function_exists('ca_numbered_pagination'))
+{
+	function ca_numbered_pagination()
+	{
+		$args = [
+			'prev_next'	=>	false,
+			'type'			=> 'array'
+		];
+
+		echo '<nav>';
+		$pagination = paginate_links($args);
+
+		if(is_array($pagination))
+		{
+			echo '<ul class="pagination pagination-lg">';
+			foreach ($pagination as $page)
+			{
+				if(stripos( $page, 'current' ))
+				{
+					echo '<li class="active"><a href="#">'. $page .'</a></li>';
+				} else {
+					echo '<li>'. $page .'</li>';
+				}
+			}
+			echo '</ul>';
+		}
+
+		echo '</nav>';
+	}
+}
 
 
 

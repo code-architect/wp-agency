@@ -14,6 +14,7 @@
 /* Load header.php */
 get_header();
 ?>
+
 <div id="fh5co-intro-section">
 	<div class="container">
 		<div class="row">
@@ -28,7 +29,7 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center heading-section">
-					
+
 
 
 						<!-- <h3>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</h3> -->
@@ -45,7 +46,10 @@ get_header();
 							<?php endif; ?>
 
 
-
+							<?php
+								/* Load numbered pagination */
+								ca_numbered_pagination();
+							?>
 
 
 					<div class="col-md-4 animate-box">
@@ -57,3 +61,8 @@ get_header();
 				</div>
 			</div>
 		</div>
+
+<?php
+/* Load header.php */
+get_footer();
+?>
