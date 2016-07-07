@@ -54,7 +54,7 @@ get_header();
 
 					<div class="col-md-4 animate-box">
 						<div class="fh5co-services">
-							sidebar
+						<?php get_sidebar(); ?>
 						</div>
 					</div>
 

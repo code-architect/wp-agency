@@ -102,6 +102,34 @@ if(!function_exists('ca_numbered_pagination'))
 	}
 }
 
+/* ---------------------------------------------------- */
+/* 5. REgister Widget Area
+/* ---------------------------------------------------- */
+
+if(!function_exists('ca_widget_init'))
+{
+	function ca_widget_init()
+	{
+		if(function_exists('register_sidebar'))
+		{
+			register_sidebar(array(
+				'name'					=>	__('Main Widget Area', 'agency'),
+				'id'						=>	'main-sidebar',
+				'description'		=>	__('Appears in the blog page', 'agency'),
+				'before_widget'	=>	'<div id="%1$s" class="holder-section %2$s">',
+				'after_widget'	=>	'</div>',
+				'before_title'	=>	'<h3>',
+				'after_title'		=>	'</h3>'
+
+			));
+		}
+	}
+
+	add_action('widgets_init', 'ca_widget_init');
+}
+
+
+
 
 
 
