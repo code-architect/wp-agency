@@ -1,34 +1,28 @@
 <?php
-/*
- #=======================================================
+/**
+ * The template for displaying the footer.
  *
- * footer.php
+ * Contains the closing of the #content div and all content after.
  *
- * The footer template
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- #=======================================================
+ * @package agency
  */
-?>
-<footer>
-			<div id="footer" class="fh5co-border-line">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<p>Copyright 2016 Free Html5 <a href="#">Agency</a>. All Rights Reserved. <br>Made with <i class="icon-heart3 love"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://www.pexels.com/" target="_blank">Pexels</a> &amp; <a href="http://plmd.me/" target="_blank">PLMD</a> </p>
-						</div>
-						<div class="col-md-6 social-text-align">
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-twitter-with-circle"></i></a>
-								<a href="#"><i class="icon-facebook-with-circle"></i></a>
-								<a href="#"><i class="icon-instagram-with-circle"></i></a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<?php wp_footer(); ?>
-	</div>
 
-	</body>
+?>
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ca-agency' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'ca-agency' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ca-agency' ), 'ca-agency', '<a href="http://codearchitect.in/" rel="designer">Code-Architect</a>' ); ?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
 </html>

@@ -1,17 +1,17 @@
 <?php
-/*
- #=======================================================
+/**
+ * The sidebar containing the main widget area.
  *
- * sidebar.php
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * The sidebar template for content
- *
- #=======================================================
+ * @package agency
  */
+
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
 ?>
-<?php
-		if(is_active_sidebar('main-sidebar'))
-		{
-			dynamic_sidebar('main-sidebar');
-		}
-?>
+
+<aside id="secondary" class="widget-area" role="complementary">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
