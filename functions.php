@@ -116,6 +116,11 @@ add_action( 'widgets_init', 'ca_agency_widgets_init' );
 function ca_agency_scripts() {
 	wp_enqueue_style( 'ca-agency-style', get_stylesheet_uri() );
 
+	// Add google function_exists
+	//wp_enqueue_style( 'ca-agency-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic' );
+	wp_enqueue_style( 'ca-agency-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
+
+
 	wp_enqueue_script( 'ca-agency-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ca-agency-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
